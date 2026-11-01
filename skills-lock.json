@@ -6,6 +6,30 @@
       "sourceType": "github",
       "skillPath": "skills/taste-skill/SKILL.md",
       "computedHash": "53590ee9325bee34d7888bf0d81bd3941a108b1e7850df46802d93104e3f2b90"
+    },
+    "oxfords": {
+      "source": "arhamhi/oxfords",
+      "sourceType": "github",
+      "skillPath": "skills/oxfords/SKILL.md",
+      "computedHash": "838f575cb9e0ef5b4273b9621966c9c885f0ca6f98e0b6395d3da7ca27f40345"
+    },
+    "swift-charts": {
+      "source": "dpearson2699/swift-ios-skills",
+      "sourceType": "github",
+      "skillPath": "skills/swift-charts/SKILL.md",
+      "computedHash": "342f1e92cee6010a0cb57d779b065f6d7952d55502cc0f296b970a4d996a55d5"
+    },
+    "ui-design": {
+      "source": "PyModel/react-frontend-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ui-design/SKILL.md",
+      "computedHash": "ae25c4e9b64d3b3d982f574c1f603a4cc77502207cc71115290b551e4ff073ac"
+    },
+    "web-design-guidelines": {
+      "source": "PyModel/react-frontend-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "3ac0bb7acd621d879b37bb752104b88a02fd32d86bb934a3299766ea0929bacf"
     }
   }
 }

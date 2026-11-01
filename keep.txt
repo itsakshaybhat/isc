@@ -1,0 +1,26 @@
+# Keep list for the INVESTSIGHT CAPITAL UX evolve pass (oxfords redesign.md, step 1).
+# Scope: Evolve. Same structure, routes, labels, data and brand; fix the floor.
+# Brand: INVESTSIGHT CAPITAL logo (assets/investsight-logo.png), brand teal var(--brand), gold #c59448 accent, system font stack (Segoe UI first).
+# Colour meanings that must not change: green = gain/positive/running, red = loss/negative/kill switch/stopped, amber = waiting/review.
+# Routes: #/home #/explore #/plan/selections #/plan/actions #/portfolio #/orders #/risk #/analysis #/sectors #/tools #/settings/* #/admin/*
+INVESTSIGHT CAPITAL
+Dashboard
+Explore stocks
+Execution
+Portfolio
+Orders
+Risk & alerts
+Analysis
+More tools
+Settings
+Sign out
+Long-term
+Swing
+Intraday
+Kill switch
+Selected stocks
+Stock actions
+Total account value
+Net profit
+Cash you can use
+Automation at a glance
