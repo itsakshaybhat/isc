@@ -1,0 +1,52 @@
+/* workspace-v10 · UX floor (Oxfords "Evolve" pass). Loaded last. Same structure, labels, routes and brand;
+   fixes the floor: header at laptop widths, short screens, visible focus, aligned numbers, calm status,
+   no side rails, no hover jumps, reduced motion. */
+
+:root{--focus-ring:#438cf4}
+
+/* ---------- Header: keep one tidy layout at laptop widths (761-1250px) ---------- */
+.workspace-header .strategy-tab{white-space:nowrap}
+@media(max-width:1250px) and (min-width:761px){
+  .workspace-header{grid-template-columns:32px minmax(0,1fr) auto;grid-template-areas:'toggle strategies account' 'search search broker';padding:0 20px 12px;gap:8px 16px}
+  .workspace-header>.sidebar-toggle{grid-area:toggle;align-self:center}
+  .workspace-header .strategy-tabs{grid-area:strategies;gap:16px;min-width:0}
+  .workspace-header>.account-controls{grid-area:account}
+  .workspace-header .header-search{grid-area:search;min-width:0}
+  .workspace-header .header-broker-controls{grid-area:broker;justify-content:flex-end}
+  .workspace-header .theme-picker summary>span{display:none}
+}
+@media(max-width:900px) and (min-width:761px){
+  .workspace-header .strategy-tab .icon{display:none}
+  .workspace-header .strategy-tabs{gap:14px}
+  .workspace-header .broker-pill .muted{display:none}
+}
+
+/* ---------- Sidebar: every main destination visible on short screens ---------- */
+@media(max-height:760px) and (min-width:761px){
+  .sidebar{padding-top:12px;padding-bottom:8px}
+  .sidebar-brand-row{min-height:52px}
+  .sidebar .nav-item{min-height:34px;padding-top:6px;padding-bottom:6px;margin:1px 0}
+  .sidebar-bottom{padding-top:4px;margin-top:4px}
+}
+
+/* ---------- Focus: visible on every control, including fields whose box carries the border ---------- */
+:focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
+.search-shell:has(input:focus-visible),.password-field:has(input:focus-visible),.one-click-input:has(input:focus-visible){outline:3px solid var(--focus-ring);outline-offset:2px}
+
+/* ---------- Numbers: right-aligned, tabular figures (columns are marked by ux-polish.js) ---------- */
+table :is(td,th).num{text-align:right;font-variant-numeric:tabular-nums}
+table td,.metric-value,.list-line span:last-child,.return-strip strong,.ai-score-tile strong{font-variant-numeric:tabular-nums}
+
+/* ---------- Status: quiet by default; tint only what needs attention (amber, red) ---------- */
+.badge:not(.amber):not(.red){background:transparent;border-color:transparent;padding-left:0;padding-right:0;color:var(--text);font-weight:600}
+.badge:not(.amber):not(.red)::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--muted);flex:0 0 7px}
+.badge.green::before{background:var(--positive)}
+
+/* ---------- Hover: change colour, never position ---------- */
+.action-counter:hover,.chat-fab:hover{transform:none}
+
+/* ---------- Page heads: the title is the heading; no label above it ---------- */
+.page-head h1{margin-top:0}
+
+/* ---------- Motion: honour the system setting as well as Settings → Display ---------- */
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
